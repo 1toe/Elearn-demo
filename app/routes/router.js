@@ -12,11 +12,11 @@ const rutas = (req, res) => {
         }
 
         // Rutas de autenticación
-        if (req.url === "/auth/login" && req.method === "GET") { // El GET significa que se está solicitando la página de inicio de sesión
-            return AuthController.getLogin(req, res); // Se llama al método getLogin del controlador de autenticación
+        if (req.url === "/auth/login" && req.method === "GET") {
+            return AuthController.getLogin(req, res);
         }
-        if (req.url === "/auth/login" && req.method === "POST") { // EL POST significa que se está enviando el formulario de inicio de sesión
-            return AuthController.postLogin(req, res); // Se llama al método postLogin del controlador de autenticación
+        if (req.url === "/auth/login" && req.method === "POST") {
+            return AuthController.postLogin(req, res);
         }
         if (req.url === "/auth/registro" && req.method === "GET") {
             return AuthController.getRegister(req, res);
@@ -42,4 +42,4 @@ const rutas = (req, res) => {
     }
 };
 
-module.exports = rutas; // Se exporta la función rutas para que pueda ser utilizada en otros archivos
+module.exports = rutas;
